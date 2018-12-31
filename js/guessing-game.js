@@ -46,7 +46,7 @@ class Game {
     if(this.playersGuess < 1 || this.playersGuess > 100 || isNaN(this.playersGuess)){
       return 'That is an invalid guess.';
     }
-    return this.checkGuess.call(this);
+    return this.checkGuess(this);
   }
   checkGuess() {
     if (this.playersGuess === this.winningNumber) {
@@ -99,7 +99,7 @@ function play(){
    submitButton.addEventListener('click', function(){
       let guessValue = enterGuess.value;
       enterGuess.value = '';
-      gameMessage.innerHTML = game.playersGuessSubmission(guessValue);
+      gameMessage.innerHTML = game.playersGuessSubmission(Number(guessValue));
 
       for(let i = 0; i < showGuess.length, i < game.pastGuesses.length; i++){
         showGuess[i].style.fontSize = "xx-large";
@@ -112,7 +112,8 @@ function play(){
       if(key === 13){
         let guessValue = enterGuess.value;
         enterGuess.value = '';
-        gameMessage.innerHTML = game.playersGuessSubmission(guessValue);
+        gameMessage.innerHTML = game.playersGuessSubmission(Number(guessValue));
+        console.log(game.winningNumber)
 
         for(let i = 0; i < showGuess.length, i < game.pastGuesses.length; i++){
           showGuess[i].style.fontSize = "xx-large";
@@ -125,7 +126,6 @@ function play(){
    hint.addEventListener('click', function(){
      let getHint = game.provideHint();
      gameMessage.innerHTML = getHint;
-     console.log(game.pastGuesses)
    });
 
    reset.addEventListener('click', function(){
