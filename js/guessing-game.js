@@ -136,60 +136,6 @@ function play(){
      for(let i = 0; i < showGuess.length; i++){
        showGuess[i].value = '';
      }
-     return game;
    });
 }
 play();
-
-
-
-
-
-// // eventlisteners
-// const submitButton = document.getElementById('submitGuess');
-// const resetButton = document.getElementById('Reset');
-// const hintButton = document.getElementById('Hint');
-// const message = document.getElementById('message')
-// const userInput= document.getElementById('input');
-// const pastGuess = document.getElementsByClassName("output-num");
-// // display previous guesses
-// //
-// function play(){
-//   var game = newGame();
-//   var getHint = game.provideHint();
-//
-//   submitButton.addEventListener('click', function(){
-//     var text = enterGuess.value;
-//     enterGuess.value = '';
-//     message.innerHTML = game.playersGuessSubmission(Number(text));
-//     for(let i = 0; i < showGuess.length, i< game.pastGuesses.length; i++){
-//       showGuess[i].value = game.pastGuesses[i];
-//     }
-//   })
-
-//   document.getElementById('input').addEventListener('keypress', function(e){
-//     var key = e.which || e.keyCode;
-//     if(key === 13){
-//       var text = userInput.value;
-//       userInput.value = '';
-//       message.innerHTML = game.playersGuessSubmission(Number(text));
-//       for(let i = 0; i < pastGuess.length, i< game.pastGuesses.length; i++){
-//         pastGuess[i].value = game.pastGuesses[i];
-//       }
-//     }
-//   })
-//
-//   hintButton.addEventListener('click', function(){
-//     message.innerHTML = `The winning number is either "${game.provideHint()}"`;
-//   })
-//
-//   resetButton.addEventListener('click', function(){
-//     console.log(game = newGame())
-//     console.log(message.innerHTML = `The winning number is either "${game.provideHint()}"`);
-//     message.innerHTML = `Guess a number between 1-100!`;
-//     for(let i = 0; i < pastGuess.length; i++){
-//       pastGuess[i].value = '';
-//     }
-//   })
-// }
-// play()
