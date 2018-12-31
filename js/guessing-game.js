@@ -72,11 +72,12 @@ class Game {
     }
   }
   provideHint(){
-    let arr = [this.winningNumber, generateWinningNumber(), generateWinningNumber()];
+    let arr = [this.winningNumber, generateWinningNumber(), generateWinningNumber()].join(', ');
+    arr = `The winning number is one of these numbers " ${arr} "`;
     if(this.pastGuesses.length > 2){
       return shuffle(arr);
     } else {
-      return "You can get a hint on your 3rd guess!"
+      return "You can get a hint after your 3rd guess!"
     }
   }
 }
