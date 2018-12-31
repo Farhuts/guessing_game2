@@ -93,9 +93,6 @@ var reset = document.getElementById('Reset');
 var showGuess = document.getElementsByClassName("output-num");
 var gameMessage = document.getElementById('message');
 
-// submitButton.addEventListener("click", submit);
-// reset.addEventListener('click', startGame);
-//
 function play(){
   let game = newGame();
 
