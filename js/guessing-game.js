@@ -117,7 +117,6 @@ function play(){
         gameMessage.innerHTML = game.playersGuessSubmission(guessValue);
 
         for(let i = 0; i < showGuess.length, i < game.pastGuesses.length; i++){
-          showGuess[i].style.cursor = 'value';
           showGuess[i].style.fontSize = "xx-large";
           showGuess[i].value = game.pastGuesses[i];
         }
@@ -133,10 +132,10 @@ function play(){
 
    reset.addEventListener('click', function(){
      game = newGame();
+     gameMessage.innerHTML = 'Guess a number between 1-100!';
      for(let i = 0; i < showGuess.length; i++){
        showGuess[i].value = '';
      }
-     console.log(game)
      return game;
    });
 }
